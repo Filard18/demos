@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Barbearia Dom Sousa</title>
+<meta name="description" content="WhatsApp, endereço, horários e avaliações em um só lugar.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Barbearia Dom Sousa">
+<meta property="og:description" content="WhatsApp, endereço, horários e avaliações em um só lugar.">
+<meta property="og:url" content="https://filard18.github.io/demos/barbearia-dom-sousa/">
+<meta property="og:image" content="https://filard18.github.io/demos/barbearia-dom-sousa/capa.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Modelo de site "salões e barbearias". Estrutura gerada com apoio de IA (Claude).
+     Todos os dados do negócio vêm do config.js, que fica ao lado deste arquivo. -->
+<style>
+  :root {
+    --cor: #d4a24c;
+    --cor-texto: #ffffff;
+    --fundo: #121416;
+    --fundo-2: #1a1d21;
+    --texto: #f1f2f4;
+    --suave: #a9afb7;
+    --linha: #2c3137;
+    --raio: 4px;
+    --fonte-titulo: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--fundo); color: var(--texto);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.15; margin: 0; text-wrap: balance;  }
+  a { color: inherit; }
+  .faixa { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .oculto { display: none !important; }
+
+  header { background: var(--fundo); border-bottom: 1px solid var(--linha); position: sticky; top: 0; z-index: 5; }
+  header .faixa { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 62px; }
+  .marca { font-family: var(--fonte-titulo); font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; min-width: 0;  }
+  .marca span.nome { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .selo { flex: none; width: 36px; height: 36px; border-radius: 10px; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; }
+  .selo svg { width: 20px; height: 20px; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+    min-height: 50px; padding: 12px 22px; border-radius: var(--raio); border: 2px solid transparent;
+    font-weight: 700; font-size: 1rem; text-decoration: none; cursor: pointer; transition: transform .12s ease, filter .12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); filter: brightness(1.06); }
+  .btn:focus-visible { outline: 3px solid var(--cor); outline-offset: 3px; }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .btn-zap { background: #1faa59; color: #fff; }
+  .btn-cor { background: var(--cor); color: var(--cor-texto); }
+  .btn-linha { background: transparent; color: var(--texto); border-color: var(--linha); }
+  header .btn { min-height: 42px; padding: 8px 16px; font-size: .93rem; flex: none; }
+
+  .hero { background: var(--fundo); color: var(--texto); padding: 64px 0 60px; }
+  .hero .faixa { display: grid; gap: 34px; align-items: center; grid-template-columns: 1.25fr .75fr; }
+  .olho { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; opacity: .85; margin: 0 0 14px; }
+  .hero h1 { font-size: clamp(2.1rem, 6vw, 3.5rem); font-weight: 800; }
+  .hero p.sub { font-size: 1.1rem; margin: 18px 0 26px; max-width: 34em; opacity: .92; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero .btn-linha { color: var(--texto); border-color: var(--linha); }
+  .arte { aspect-ratio: 1; max-width: 300px; width: 100%; justify-self: end; border-radius: 4px; background: var(--cor); display: grid; place-items: center; color: var(--cor-texto); }
+  .arte svg { width: 46%; height: 46%; }
+
+  .nota-google { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; padding: 9px 15px; border-radius: 999px; background: var(--fundo-2); font-weight: 600; font-size: .93rem; text-decoration: none; }
+  .estrelas { color: #f5b301; letter-spacing: 2px; }
+
+  section { padding: 58px 0; background: var(--fundo); }
+  section.alt { background: var(--fundo-2); }
+  section h2 { font-size: clamp(1.55rem, 4vw, 2.1rem); font-weight: 800; margin-bottom: 8px; }
+  section p.intro { color: var(--suave); margin: 0 0 28px; max-width: 40em; }
+
+  .grade { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); padding: 0; margin: 0; list-style: none; }
+  .grade li { background: var(--fundo); border: 1px solid var(--linha); border-radius: var(--raio); padding: 18px 18px 18px 46px; position: relative; font-weight: 600; }
+  section.alt .grade li { background: var(--fundo); }
+  .grade li::before { content: ""; position: absolute; left: 18px; top: 26px; width: 14px; height: 14px; border-radius: 0; background: var(--cor); }
+
+  .duas { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+  .cartao { background: var(--fundo); border: 1px solid var(--linha); border-radius: var(--raio); padding: 26px; }
+  .cartao h3 { font-size: 1.15rem; margin-bottom: 10px; }
+  .cartao p { margin: 0 0 18px; color: var(--suave); }
+  .horarios { width: 100%; border-collapse: collapse; margin: 0 0 6px; }
+  .horarios td { padding: 7px 0; border-bottom: 1px solid var(--linha); }
+  .horarios td:last-child { text-align: right; font-weight: 600; }
+
+  .chamada { background: var(--cor); color: var(--cor-texto); text-align: center; padding: 54px 0; }
+  .chamada h2 { margin-bottom: 20px; }
+  .chamada .btn { background: #fff; color: #14171a; }
+
+  footer { background: #0b0c0e; color: #a9afb7; padding: 30px 0 96px; font-size: .92rem; }
+  footer .faixa { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: space-between; }
+  footer a { text-decoration: underline; }
+
+  .flutua { position: fixed; right: 16px; bottom: 16px; z-index: 9; width: 60px; height: 60px; border-radius: 50%; background: #1faa59; color: #fff; display: grid; place-items: center; box-shadow: 0 6px 20px rgba(0,0,0,.28); }
+  .flutua svg { width: 30px; height: 30px; }
+
+  .demo-aviso { background: #fff7d6; color: #4a3b00; text-align: center; font-size: .86rem; padding: 7px 14px; }
+
+  @media (max-width: 760px) {
+    .hero { padding: 44px 0 42px; }
+    .hero .faixa { grid-template-columns: 1fr; }
+    .arte { display: none; }
+    .duas { grid-template-columns: 1fr; }
+    .acoes .btn { width: 100%; }
+    header .btn span.longo { display: none; }
+    section { padding: 44px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+<div class="demo-aviso oculto" id="demoAviso">Demonstração feita para <b data-nome></b>. Textos e serviços são exemplo e mudam com o que você me passar.</div>
+
+<header>
+  <div class="faixa">
+    <div class="marca"><span class="selo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.100 15.900M14.500 14.500 20 20M8.100 8.100 12 12"/></svg></span><span class="nome" data-nome></span></div>
+    <a class="btn btn-zap" data-zap target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.300-1.200l-.3-.2-3 .800.800-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200Zm4.500-6.100c-.2-.100-1.500-.700-1.700-.800-.2-.100-.400-.100-.600.100l-.800 1c-.100.200-.300.200-.500.100-1.500-.700-2.500-1.300-3.400-3-.300-.400.300-.400.700-1.300.100-.200 0-.300 0-.500l-.800-1.800c-.200-.500-.400-.400-.600-.400h-.500c-.200 0-.500.100-.700.300-.900.900-1 2.100-.300 3.400 1.300 2.300 2.700 3.700 5.300 4.700 1.100.400 1.900.300 2.600-.300.500-.400.800-1 .900-1.500 0-.200-.100-.300-.300-.400Z"/></svg><span>Marcar</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="faixa">
+      <div>
+        <p class="olho"><span id="olho">Horário marcado</span></p>
+        <h1 id="titulo">Seu horário garantido, sem esperar na fila</h1>
+        <p class="sub" id="sub">Chama no WhatsApp, escolhe o dia e a hora e já sai com tudo combinado.</p>
+        <div class="acoes">
+          <a class="btn btn-zap" data-zap target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.300-1.200l-.3-.2-3 .800.800-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200Zm4.500-6.100c-.2-.100-1.500-.700-1.700-.800-.2-.100-.400-.100-.600.100l-.800 1c-.100.200-.300.200-.500.100-1.500-.700-2.500-1.300-3.400-3-.300-.400.300-.400.700-1.300.100-.200 0-.300 0-.500l-.800-1.800c-.200-.500-.400-.400-.600-.400h-.500c-.200 0-.500.100-.700.300-.900.900-1 2.100-.300 3.400 1.300 2.300 2.700 3.700 5.300 4.700 1.100.400 1.900.300 2.600-.300.500-.400.800-1 .900-1.500 0-.200-.100-.300-.300-.400Z"/></svg><span>Marcar horário</span></a>
+          <a class="btn btn-linha" href="#local">Como chegar</a>
+        </div>
+        <a class="nota-google oculto" id="notaGoogle" target="_blank" rel="noopener">
+          <span class="estrelas" aria-hidden="true">★★★★★</span><span id="notaTexto"></span>
+        </a>
+      </div>
+      <div class="arte" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.100 15.900M14.500 14.500 20 20M8.100 8.100 12 12"/></svg></div>
+    </div>
+  </div>
+
+  <section class="alt oculto" id="servicos">
+    <div class="faixa">
+      <h2>Serviços</h2>
+      <p class="intro">Valores e horários disponíveis pelo WhatsApp.</p>
+      <ul class="grade" id="listaServicos"></ul>
+    </div>
+  </section>
+
+  <section id="local">
+    <div class="faixa">
+      <h2>Onde estamos</h2>
+      <p class="intro">Passa aqui ou marca antes para não esperar.</p>
+      <div class="duas">
+        <div class="cartao">
+          <h3>Endereço</h3>
+          <p id="endereco"></p>
+          <a class="btn btn-cor" id="btnMapa" target="_blank" rel="noopener">Abrir no mapa</a>
+        </div>
+        <div class="cartao oculto" id="cartaoHorarios">
+          <h3>Horário de atendimento</h3>
+          <table class="horarios" id="tabelaHorarios"></table>
+        </div>
+        <div class="cartao" id="cartaoContato">
+          <h3>Fale com a gente</h3>
+          <p>Agendamento e dúvidas direto no WhatsApp.</p>
+          <div class="acoes">
+            <a class="btn btn-zap" data-zap target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.300-1.200l-.3-.2-3 .800.800-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200Zm4.500-6.100c-.2-.100-1.500-.700-1.700-.800-.2-.100-.400-.100-.600.100l-.800 1c-.100.200-.300.200-.500.100-1.500-.700-2.500-1.300-3.400-3-.300-.400.300-.400.700-1.300.100-.200 0-.300 0-.500l-.800-1.800c-.200-.500-.400-.400-.600-.400h-.500c-.200 0-.500.100-.700.300-.900.900-1 2.100-.300 3.400 1.300 2.300 2.700 3.700 5.300 4.700 1.100.400 1.900.300 2.600-.300.500-.400.800-1 .900-1.500 0-.200-.100-.300-.300-.400Z"/></svg><span>WhatsApp</span></a>
+            <a class="btn btn-linha oculto" id="btnInsta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt oculto" id="avaliacoes">
+    <div class="faixa">
+      <h2>Gostou do resultado?</h2>
+      <p class="intro">Deixa sua avaliação no Google. Leva um minuto e ajuda muito quem trabalha aqui.</p>
+      <div class="acoes">
+        <a class="btn btn-cor" id="btnAvaliar" target="_blank" rel="noopener">Avaliar no Google</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="chamada">
+    <div class="faixa">
+      <h2>Bora marcar?</h2>
+      <a class="btn" data-zap target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.300-1.200l-.3-.2-3 .800.800-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200Zm4.500-6.100c-.2-.100-1.500-.700-1.700-.800-.2-.100-.400-.100-.600.100l-.800 1c-.100.200-.300.200-.500.100-1.500-.700-2.500-1.300-3.400-3-.300-.400.300-.400.700-1.300.100-.200 0-.300 0-.500l-.800-1.800c-.200-.500-.400-.400-.600-.400h-.500c-.200 0-.500.100-.700.300-.900.900-1 2.100-.300 3.400 1.300 2.300 2.700 3.700 5.300 4.700 1.100.400 1.900.300 2.600-.300.500-.400.800-1 .900-1.500 0-.200-.100-.300-.300-.400Z"/></svg><span>Marcar horário</span></a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="faixa">
+    <span><b data-nome></b><span id="rodapeCidade"></span></span>
+    <span id="rodapeLinks"></span>
+  </div>
+</footer>
+
+<a class="flutua" data-zap target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.300-1.200l-.3-.2-3 .800.800-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200Zm4.500-6.100c-.2-.100-1.500-.700-1.700-.800-.2-.100-.400-.100-.600.100l-.800 1c-.100.200-.300.200-.500.100-1.500-.700-2.500-1.300-3.400-3-.300-.400.300-.400.700-1.300.100-.200 0-.300 0-.500l-.800-1.800c-.200-.500-.400-.400-.600-.400h-.500c-.200 0-.500.100-.700.300-.900.900-1 2.100-.300 3.400 1.300 2.300 2.700 3.700 5.300 4.700 1.100.400 1.900.300 2.600-.300.500-.400.800-1 .900-1.500 0-.200-.100-.300-.300-.400Z"/></svg></a>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var c = window.NEGOCIO || {};
+  var $ = function (id) { return document.getElementById(id); };
+  var mostra = function (el) { el.classList.remove("oculto"); };
+
+  // cor principal + cor de texto que dá contraste em cima dela
+  if (/^#[0-9a-f]{6}$/i.test(c.corPrincipal || "")) {
+    var h = c.corPrincipal.slice(1);
+    var lum = [0, 2, 4].map(function (i) {
+      var v = parseInt(h.substr(i, 2), 16) / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    var L = 0.2126 * lum[0] + 0.7152 * lum[1] + 0.0722 * lum[2];
+    document.documentElement.style.setProperty("--cor", c.corPrincipal);
+    document.documentElement.style.setProperty("--cor-texto", L > 0.35 ? "#14171a" : "#ffffff");
+  }
+
+  var nome = c.nome || "Nome do negócio";
+  document.title = nome + (c.cidade ? " | " + c.cidade : "");
+  document.querySelectorAll("[data-nome]").forEach(function (el) { el.textContent = nome; });
+  if (c.demo) mostra($("demoAviso"));
+  if (c.chamada) $("titulo").textContent = c.chamada;
+  if (c.descricao) $("sub").textContent = c.descricao;
+  if (c.cidade) { $("olho").textContent = $("olho").textContent + " em " + c.cidade; $("rodapeCidade").textContent = " · " + c.cidade; }
+
+  // WhatsApp: só dígitos, com 55 na frente
+  var zap = String(c.whatsapp || "").replace(/\D/g, "");
+  if (zap && zap.indexOf("55") !== 0) zap = "55" + zap;
+  var msg = c.mensagemWhatsApp || "Oi! Vi o site e quero marcar um horário.";
+  document.querySelectorAll("[data-zap]").forEach(function (a) {
+    if (zap) a.href = "https://wa.me/" + zap + "?text=" + encodeURIComponent(msg);
+    else a.classList.add("oculto");
+  });
+
+  // serviços
+  var serv = Array.isArray(c.servicos) ? c.servicos.filter(Boolean) : [];
+  if (serv.length) {
+    serv.forEach(function (s) { var li = document.createElement("li"); li.textContent = s; $("listaServicos").appendChild(li); });
+    mostra($("servicos"));
+  }
+
+  // endereço e mapa
+  $("endereco").textContent = c.endereco || "Endereço a confirmar";
+  var mapa = c.linkMapa || (c.endereco ? "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(nome + " " + c.endereco) : "");
+  if (mapa) $("btnMapa").href = mapa; else $("btnMapa").classList.add("oculto");
+
+  // horários (opcional): [["Seg a sex", "8h às 18h"], ...]
+  if (Array.isArray(c.horarios) && c.horarios.length) {
+    c.horarios.forEach(function (h) {
+      var tr = document.createElement("tr");
+      [h[0], h[1]].forEach(function (t) { var td = document.createElement("td"); td.textContent = t; tr.appendChild(td); });
+      $("tabelaHorarios").appendChild(tr);
+    });
+    mostra($("cartaoHorarios"));
+    $("cartaoContato").style.gridColumn = "1 / -1";
+  }
+
+  // Instagram: aceita @usuario, usuario ou link
+  var links = [];
+  var ig = String(c.instagram || "").trim();
+  if (ig) {
+    var url = /^https?:/.test(ig) ? ig : "https://www.instagram.com/" + ig.replace(/^@/, "") + "/";
+    $("btnInsta").href = url; mostra($("btnInsta"));
+    links.push('<a href="' + encodeURI(url) + '" target="_blank" rel="noopener">Instagram</a>');
+  }
+
+  // avaliações do Google: mostra a nota só se vier no config (dado real da ficha)
+  if (c.linkAvaliacaoGoogle) {
+    $("btnAvaliar").href = c.linkAvaliacaoGoogle; mostra($("avaliacoes"));
+    links.push('<a href="' + encodeURI(c.linkAvaliacaoGoogle) + '" target="_blank" rel="noopener">Avaliações no Google</a>');
+    if (c.notaGoogle && c.totalAvaliacoes) {
+      $("notaTexto").textContent = c.notaGoogle + " no Google · " + c.totalAvaliacoes + " avaliações";
+      $("notaGoogle").href = c.linkAvaliacaoGoogle; mostra($("notaGoogle"));
+    }
+  }
+  $("rodapeLinks").innerHTML = links.join(" · ");
+})();
+</script>
+</body>
+</html>
