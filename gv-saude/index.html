@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GV Saúde · Odontologia Integrativa em Catalão-GO</title>
+<meta name="description" content="Clínica odontológica de família em Catalão-GO. Bruxismo e DTM, facetas, reabilitação oral, siso, implantes, cirurgia ortognática e artroscopia de ATM, com cuidado integrativo.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GV Saúde · Odontologia de família em Catalão">
+<meta property="og:description" content="Um jardim na entrada, chá quente e tempo para ouvir. Agende pelo WhatsApp.">
+<meta property="og:image" content="https://filard18.github.io/demos/gv-saude/img/fachada.jpg">
+<meta property="og:url" content="https://filard18.github.io/demos/gv-saude/">
+<meta name="theme-color" content="#0b4a4c">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+<!-- Antes de publicar, se a família quiser contar: ano de abertura da clínica e
+     como Vera e Gabriel se conheceram (capítulo "A família"). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "GV Saúde Núcleo Integrativo",
+  "telephone": "+55 64 99938-8006",
+  "url": "https://clinicagvsaude.com.br/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Édson Pacelli José Ferreira (antiga Rua 31), 590, Vila Margom",
+    "addressLocality": "Catalão",
+    "addressRegion": "GO",
+    "postalCode": "75711-080",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "18:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "17:00"}
+  ]
+}
+</script>
+
+<style>
+:root {
+  --teal: #0b4a4c;
+  --teal-fundo: #0a3f41;
+  --verde: #53764d;
+  --terra: #b5562a;
+  --ouro: #c2963a;
+  --creme: #f6f1e4;
+  --papel: #faf7f0;
+  --tinta: #1d2a2a;
+  --suave: #5f6d6b;
+  --linha: rgba(11, 74, 76, .16);
+  --arco: 999px 999px 0 0;
+  --serif: "Rasa", Georgia, serif;
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --lado: clamp(20px, 5vw, 72px);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--papel); color: var(--tinta); font-family: var(--sans); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p, blockquote, figure { margin: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 300; line-height: 1.08; letter-spacing: -.015em; }
+em { font-style: italic; }
+:focus-visible { outline: 2px solid var(--ouro); outline-offset: 4px; }
+
+.cap { font-size: .74rem; letter-spacing: .28em; text-transform: uppercase; font-weight: 500; color: var(--terra); }
+.cap b { font-family: var(--serif); font-weight: 400; letter-spacing: .1em; margin-right: .6em; color: var(--ouro); font-size: 1rem; }
+.miolo { width: min(1240px, 100% - var(--lado) * 2); margin-inline: auto; }
+
+/* ---------- topo ---------- */
+.topo { position: fixed; inset: 0 0 auto; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 22px var(--lado); transition: background .5s, padding .5s, color .5s; color: var(--creme); }
+.topo.solido { background: rgba(250,247,240,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding-block: 14px; color: var(--teal); }
+.topo .logo { display: block; height: 30px; }
+.topo .logo img { height: 30px; width: auto; }
+.topo .logo .claro { display: block; } .topo .logo .escuro { display: none; }
+.topo.solido .logo .claro { display: none; } .topo.solido .logo .escuro { display: block; }
+.topo nav { display: flex; align-items: center; gap: 26px; font-size: .9rem; }
+.botao-menu { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 6px 0; letter-spacing: .08em; }
+.botao-menu i { display: grid; gap: 5px; } .botao-menu i::before, .botao-menu i::after { content: ""; display: block; width: 22px; height: 1.5px; background: currentColor; }
+.agendar { text-decoration: none; border: 1px solid currentColor; padding: 10px 20px; border-radius: 999px; transition: background .3s, color .3s; }
+.topo .agendar:hover { background: var(--creme); color: var(--teal); }
+.topo.solido .agendar:hover { background: var(--teal); color: var(--creme); }
+
+.menu { position: fixed; inset: 0; z-index: 60; background: var(--teal); color: var(--creme); display: grid; grid-template-rows: auto 1fr auto; padding: 22px var(--lado) 40px; opacity: 0; visibility: hidden; transition: opacity .5s, visibility .5s; }
+.menu.aberto { opacity: 1; visibility: visible; }
+.menu .fecha { justify-self: end; background: none; border: 0; color: inherit; font: inherit; letter-spacing: .08em; cursor: pointer; padding: 8px 0; }
+.menu ol { list-style: none; margin: 0; padding: 0; align-self: center; display: grid; gap: 6px; counter-reset: m; }
+.menu li { overflow: hidden; }
+.menu ol a { display: inline-flex; align-items: baseline; gap: 18px; text-decoration: none; font-family: var(--serif); font-weight: 300; font-size: clamp(2.2rem, 6vw, 4.4rem); line-height: 1.15; transform: translateY(110%); transition: transform .8s cubic-bezier(.2,.7,.1,1), color .3s; }
+.menu ol a::before { counter-increment: m; content: counter(m, upper-roman); font-size: .9rem; letter-spacing: .1em; color: var(--ouro); font-family: var(--sans); width: 2.4em; }
+.menu.aberto ol a { transform: none; }
+.menu.aberto li:nth-child(2) a { transition-delay: .05s; } .menu.aberto li:nth-child(3) a { transition-delay: .1s; } .menu.aberto li:nth-child(4) a { transition-delay: .15s; } .menu.aberto li:nth-child(5) a { transition-delay: .2s; } .menu.aberto li:nth-child(6) a { transition-delay: .25s; }
+.menu ol a:hover { color: var(--ouro); }
+.menu .rodape-menu { display: flex; flex-wrap: wrap; gap: 10px 32px; font-size: .9rem; color: rgba(246,241,228,.7); }
+.menu .rodape-menu a { text-decoration: none; }
+
+/* ---------- abertura ---------- */
+.abertura { position: relative; height: 100svh; min-height: 560px; overflow: hidden; color: var(--creme); }
+.abertura .foto { position: absolute; inset: 0; will-change: transform; }
+.abertura .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; animation: aproxima 14s ease-out both; }
+@keyframes aproxima { from { transform: scale(1.08); } to { transform: scale(1); } }
+.abertura::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,40,41,.45) 0%, rgba(10,40,41,.05) 35%, rgba(10,40,41,.15) 60%, rgba(10,40,41,.75) 100%); }
+.abertura .texto { position: absolute; z-index: 2; left: var(--lado); right: var(--lado); bottom: clamp(56px, 10vh, 110px); display: grid; gap: 22px; max-width: 980px; }
+.abertura h1 { font-size: clamp(2.8rem, 7.4vw, 6.6rem); }
+.abertura h1 em { color: #e9c987; }
+.abertura .sub { font-size: .8rem; letter-spacing: .3em; text-transform: uppercase; opacity: .85; }
+.desca { position: absolute; z-index: 2; right: var(--lado); bottom: clamp(120px, 18vh, 180px); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; writing-mode: vertical-rl; display: flex; align-items: center; gap: 14px; opacity: .8; }
+.desca::after { content: ""; width: 1px; height: 64px; background: currentColor; animation: desce 2.4s ease-in-out infinite; transform-origin: top; }
+@keyframes desce { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+/* cantos finos, como moldura */
+.cantos { position: absolute; z-index: 2; inset: 18px; pointer-events: none; }
+.cantos i { position: absolute; width: 26px; height: 26px; border-color: rgba(246,241,228,.55); border-style: solid; border-width: 0; }
+.cantos i:nth-child(1) { left: 0; top: 70px; border-left-width: 1px; border-top-width: 1px; }
+.cantos i:nth-child(2) { right: 0; top: 70px; border-right-width: 1px; border-top-width: 1px; }
+.cantos i:nth-child(3) { left: 0; bottom: 0; border-left-width: 1px; border-bottom-width: 1px; }
+.cantos i:nth-child(4) { right: 0; bottom: 0; border-right-width: 1px; border-bottom-width: 1px; }
+
+/* ---------- frase (respiro) ---------- */
+.frase { min-height: 92svh; display: grid; place-items: center; text-align: center; padding: 120px var(--lado); }
+.frase p { font-family: var(--serif); font-weight: 300; font-size: clamp(1.8rem, 3.9vw, 3.3rem); line-height: 1.28; max-width: 22ch; color: var(--teal); }
+.frase p em { color: var(--terra); }
+.frase .simbolo { width: 46px; margin: 0 auto 48px; opacity: .85; }
+
+/* revelar linha a linha */
+.linhas .l { display: block; overflow: hidden; padding-bottom: .06em; }
+.linhas .l > span { display: block; transform: translateY(105%); transition: transform 1.2s cubic-bezier(.2,.7,.1,1); }
+.linhas.visivel .l > span { transform: none; }
+
+/* ---------- capítulo: a chegada (fixo enquanto rola) ---------- */
+.chegada { position: relative; }
+.chegada .cabeca { padding-bottom: 80px; }
+.chegada .palco { display: grid; grid-template-columns: 1fr 1fr; width: min(1240px, 100% - var(--lado) * 2); margin-inline: auto; gap: clamp(32px, 6vw, 96px); }
+.chegada .quadro { position: sticky; top: 12vh; height: 76vh; border-radius: var(--arco); overflow: hidden; background: var(--creme); }
+.chegada .quadro img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity 1.2s ease, transform 2.4s ease; }
+.chegada .quadro img.ativa { opacity: 1; transform: none; }
+.chegada .contorno { position: absolute; inset: 14px; border: 1px solid rgba(246,241,228,.6); border-radius: var(--arco); z-index: 2; pointer-events: none; }
+.chegada .passos { padding-bottom: 12vh; }
+.chegada .passo { min-height: 76vh; display: grid; align-content: center; gap: 18px; max-width: 30rem; opacity: .22; transition: opacity .8s; }
+.chegada .passo.ativo { opacity: 1; }
+.chegada .passo .n { font-family: var(--serif); color: var(--ouro); font-size: 1.1rem; }
+.chegada .passo h3 { font-size: clamp(1.9rem, 3.2vw, 2.8rem); color: var(--teal); }
+.chegada .passo p { color: var(--suave); font-size: 1.05rem; }
+.chegada .passo .foto-celular { display: none; }
+
+/* cabeçalho de capítulo */
+.cabeca { display: grid; gap: 22px; padding-top: clamp(100px, 14vh, 160px); }
+.cabeca h2 { font-size: clamp(2.4rem, 5.2vw, 4.6rem); color: var(--teal); max-width: 16ch; }
+.cabeca p { color: var(--suave); max-width: 46ch; font-size: 1.08rem; }
+
+/* ---------- capítulo: a família ---------- */
+.familia { background: var(--creme); padding-bottom: clamp(100px, 14vh, 170px); }
+.familia .cabeca { width: min(1240px, 100% - var(--lado) * 2); margin-inline: auto; }
+.retratos { width: min(1240px, 100% - var(--lado) * 2); margin: clamp(64px, 9vh, 110px) auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 80px); align-items: end; }
+.retrato { display: grid; gap: 20px; }
+.retrato:nth-child(2) { margin-bottom: clamp(60px, 10vw, 140px); }
+.retrato .moldura { aspect-ratio: 4 / 5; border-radius: var(--arco); overflow: hidden; }
+.retrato .moldura img { width: 100%; height: 115%; object-fit: cover; will-change: transform; }
+.retrato h3 { font-size: clamp(1.6rem, 2.4vw, 2.1rem); color: var(--teal); }
+.retrato .esp { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--terra); }
+.retrato p { color: var(--suave); max-width: 40ch; }
+.retrato .cro { font-size: .8rem; color: var(--suave); opacity: .75; }
+
+.linha-tempo { width: min(980px, 100% - var(--lado) * 2); margin: clamp(110px, 16vh, 180px) auto 0; }
+.linha-tempo h3 { font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--teal); margin-bottom: 56px; text-align: center; }
+.marcos { list-style: none; margin: 0; padding: 0; position: relative; }
+.marcos::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--linha); }
+.marco { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding: 26px 0; position: relative; }
+.marco::after { content: ""; position: absolute; left: 50%; top: 38px; width: 9px; height: 9px; border-radius: 50%; background: var(--ouro); transform: translateX(-50%); box-shadow: 0 0 0 6px var(--creme); }
+.marco .ano { text-align: right; font-family: var(--serif); font-size: 1.9rem; color: var(--teal); font-weight: 300; }
+.marco p { color: var(--suave); max-width: 34ch; padding-top: 8px; }
+.marco:nth-child(even) .ano { order: 2; text-align: left; }
+.marco:nth-child(even) p { order: 1; justify-self: end; text-align: right; }
+
+.geracao { width: min(1240px, 100% - var(--lado) * 2); margin: clamp(120px, 18vh, 200px) auto 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.geracao .moldura { aspect-ratio: 4 / 5; border-radius: var(--arco); overflow: hidden; max-width: 380px; }
+.geracao .moldura img { width: 100%; height: 100%; object-fit: cover; }
+.geracao .txt { display: grid; gap: 20px; }
+.geracao h3 { font-size: clamp(2rem, 3.8vw, 3.3rem); color: var(--teal); }
+.geracao p { color: var(--suave); max-width: 44ch; font-size: 1.05rem; }
+
+.fala { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 1.3rem; line-height: 1.4; color: var(--teal); border-left: 1px solid var(--ouro); padding-left: 18px; max-width: 34ch; }
+.fala cite { display: block; margin-top: 8px; font-family: var(--sans); font-style: normal; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--terra); }
+
+.video { width: min(1100px, 100% - var(--lado) * 2); margin: clamp(120px, 18vh, 200px) auto 0; display: grid; gap: 28px; justify-items: center; text-align: center; }
+.video h3 { font-size: clamp(2rem, 3.8vw, 3.3rem); color: var(--teal); }
+.video p { color: var(--suave); max-width: 46ch; }
+.tela { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 28px; overflow: hidden; background: var(--teal-fundo); margin-top: 18px; }
+.tela img, .tela iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+.tela img { filter: saturate(.85); transition: transform 1.4s cubic-bezier(.2,.7,.1,1); }
+.tela button { position: absolute; inset: 0; width: 100%; border: 0; background: linear-gradient(180deg, rgba(10,40,41,.05), rgba(10,40,41,.45)); cursor: pointer; display: grid; place-items: center; color: var(--creme); font: inherit; }
+.tela button span { display: inline-flex; align-items: center; gap: 14px; padding: 18px 30px 18px 22px; border-radius: 999px; background: rgba(250,247,240,.92); color: var(--teal); font-weight: 500; transition: transform .4s; }
+.tela button span i { width: 0; height: 0; border-left: 14px solid var(--terra); border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 6px; }
+.tela button:hover span { transform: scale(1.05); }
+.tela:hover img { transform: scale(1.03); }
+.tela .duracao { position: absolute; right: 18px; bottom: 16px; z-index: 2; font-size: .8rem; color: var(--creme); letter-spacing: .12em; pointer-events: none; }
+
+/* ---------- manifesto ---------- */
+.manifesto { background: var(--teal-fundo); color: var(--creme); min-height: 100svh; display: grid; place-items: center; text-align: center; padding: 120px var(--lado); position: relative; overflow: hidden; }
+.manifesto blockquote { font-family: var(--serif); font-weight: 300; font-size: clamp(2rem, 4.6vw, 4rem); line-height: 1.2; max-width: 18ch; }
+.manifesto blockquote em { color: var(--ouro); }
+.manifesto .assina { margin-top: 44px; font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: rgba(246,241,228,.65); }
+.manifesto .arco-fundo { position: absolute; width: min(70vw, 760px); aspect-ratio: 4 / 5; border: 1px solid rgba(194,150,58,.25); border-radius: var(--arco); left: 50%; top: 50%; transform: translate(-50%, -46%); pointer-events: none; }
+
+/* ---------- especialidades ---------- */
+.cuidados { padding-bottom: clamp(100px, 14vh, 170px); }
+.cuidados .cabeca { width: min(1240px, 100% - var(--lado) * 2); margin-inline: auto; }
+.lista { width: min(1240px, 100% - var(--lado) * 2); margin: clamp(70px, 10vh, 120px) auto 0; display: grid; grid-template-columns: 1fr 2.2fr; gap: 32px clamp(32px, 6vw, 96px); }
+.lista + .lista { margin-top: clamp(80px, 12vh, 140px); }
+.lista .quem { position: sticky; top: 120px; align-self: start; display: grid; gap: 10px; }
+.lista .quem h3 { font-size: 1.7rem; color: var(--teal); }
+.lista .quem span { color: var(--suave); font-size: .92rem; }
+.lista ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--linha); }
+.lista li a { display: grid; grid-template-columns: 3.2rem 1fr auto; gap: 8px 20px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid var(--linha); text-decoration: none; transition: padding .5s cubic-bezier(.2,.7,.1,1); }
+.lista li a:hover { padding-left: 14px; }
+.lista .n { font-family: var(--serif); color: var(--ouro); }
+.lista .t { font-family: var(--serif); font-weight: 300; font-size: clamp(1.6rem, 2.8vw, 2.4rem); color: var(--teal); line-height: 1.15; }
+.lista .seta { font-size: .82rem; color: var(--terra); letter-spacing: .1em; opacity: 0; transform: translateX(-8px); transition: opacity .4s, transform .4s; white-space: nowrap; }
+.lista li a:hover .seta, .lista li a:focus-visible .seta { opacity: 1; transform: none; }
+.lista .d { grid-column: 2 / -1; color: var(--suave); max-width: 52ch; font-size: .98rem; }
+
+/* ---------- tecnologia (imagem cheia) ---------- */
+.tecnologia { position: relative; min-height: 120svh; color: var(--creme); overflow: hidden; display: grid; align-items: end; }
+.tecnologia .foto { position: absolute; inset: -10% 0; will-change: transform; }
+.tecnologia .foto img { width: 100%; height: 100%; object-fit: cover; }
+.tecnologia::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(10,40,41,.1) 30%, rgba(10,40,41,.82) 100%); }
+@media (max-width: 900px) { .tecnologia::before { background: linear-gradient(180deg, rgba(10,40,41,.15) 0%, rgba(10,40,41,.55) 40%, rgba(10,40,41,.92) 75%); } }
+.tecnologia .txt { position: relative; z-index: 2; padding: 0 var(--lado) clamp(70px, 12vh, 130px); display: grid; gap: 22px; max-width: 760px; }
+.tecnologia .cap { color: #e9c987; }
+.tecnologia h2 { font-size: clamp(2.4rem, 5vw, 4.4rem); }
+.tecnologia p { color: rgba(246,241,228,.85); max-width: 44ch; font-size: 1.08rem; }
+
+/* ---------- bem-estar ---------- */
+.bemestar { padding: clamp(110px, 16vh, 190px) 0; }
+.bemestar .miolo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.bemestar .txt { display: grid; gap: 22px; }
+.bemestar h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); color: var(--teal); }
+.bemestar p { color: var(--suave); max-width: 42ch; font-size: 1.05rem; }
+.bemestar .fotos { position: relative; height: clamp(420px, 52vw, 640px); }
+.bemestar .fotos .moldura { position: absolute; overflow: hidden; border-radius: var(--arco); }
+.bemestar .fotos .moldura img { width: 100%; height: 100%; object-fit: cover; }
+.bemestar .fotos .a { left: 0; top: 0; width: 62%; height: 82%; }
+.bemestar .fotos .b { right: 0; bottom: 0; width: 46%; height: 56%; border-radius: 18px; box-shadow: 0 0 0 10px var(--papel); }
+
+/* ---------- primeira consulta ---------- */
+.consulta { background: var(--creme); padding: clamp(100px, 14vh, 170px) 0; }
+.consulta .cabeca { padding-top: 0; }
+.consulta ol { list-style: none; margin: clamp(56px, 8vh, 90px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 64px); }
+.consulta li { border-top: 1px solid var(--linha); padding-top: 26px; display: grid; gap: 12px; align-content: start; }
+.consulta li b { font-family: var(--serif); font-weight: 300; font-size: 2.6rem; color: var(--ouro); line-height: 1; }
+.consulta li h3 { font-size: 1.5rem; color: var(--teal); }
+.consulta li p { color: var(--suave); }
+.convenio { margin-top: clamp(56px, 8vh, 90px); display: flex; flex-wrap: wrap; gap: 14px 40px; color: var(--suave); font-size: .95rem; padding-top: 26px; border-top: 1px solid var(--linha); }
+.convenio b { color: var(--teal); font-weight: 600; }
+
+/* ---------- dúvidas ---------- */
+.duvidas { padding: clamp(100px, 14vh, 170px) 0; }
+.duvidas .miolo { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+.duvidas .cabeca { padding-top: 0; position: sticky; top: 120px; }
+details { border-bottom: 1px solid var(--linha); }
+details:first-child { border-top: 1px solid var(--linha); }
+summary { list-style: none; cursor: pointer; padding: 26px 48px 26px 0; font-family: var(--serif); font-weight: 400; font-size: 1.3rem; color: var(--teal); position: relative; }
+summary::-webkit-details-marker { display: none; }
+summary::before, summary::after { content: ""; position: absolute; right: 8px; top: 50%; width: 14px; height: 1px; background: var(--terra); transition: transform .4s; }
+summary::after { transform: rotate(90deg); }
+details[open] summary::after { transform: rotate(0); }
+details p { padding: 0 0 28px; color: var(--suave); max-width: 60ch; }
+
+/* ---------- visita ---------- */
+.visita { background: var(--teal-fundo); color: var(--creme); padding: clamp(110px, 16vh, 190px) 0 0; position: relative; overflow: hidden; }
+.visita h2 { font-size: clamp(2.8rem, 7vw, 6.4rem); max-width: 12ch; }
+.visita h2 em { color: var(--ouro); }
+.visita .grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: clamp(64px, 9vh, 110px); padding-top: 32px; border-top: 1px solid rgba(246,241,228,.16); }
+.visita .grade div { display: grid; gap: 8px; align-content: start; }
+.visita .grade span { font-size: .74rem; letter-spacing: .28em; text-transform: uppercase; color: var(--ouro); }
+.visita .grade p, .visita .grade a { color: rgba(246,241,228,.85); text-decoration: none; }
+.visita .grade a:hover { text-decoration: underline; }
+.acoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 56px; }
+.btn { display: inline-flex; align-items: center; gap: 12px; padding: 17px 30px; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: .98rem; transition: transform .3s, background .3s, color .3s; }
+.btn svg { width: 19px; height: 19px; }
+.btn-claro { background: var(--creme); color: var(--teal); }
+.btn-claro:hover { transform: translateY(-2px); }
+.btn-linha { border: 1px solid rgba(246,241,228,.35); color: var(--creme); }
+.btn-linha:hover { background: rgba(246,241,228,.08); }
+.avaliar { margin-top: 28px; font-size: .92rem; color: rgba(246,241,228,.7); }
+.avaliar a { color: var(--creme); }
+.rodape { margin-top: clamp(100px, 14vh, 160px); padding: 30px 0 40px; border-top: 1px solid rgba(246,241,228,.14); display: flex; flex-wrap: wrap; gap: 18px 40px; justify-content: space-between; align-items: center; font-size: .84rem; color: rgba(246,241,228,.55); }
+.rodape img { height: 28px; width: auto; opacity: .85; }
+
+/* WhatsApp flutuante discreto */
+.zap { position: fixed; right: 20px; bottom: 20px; z-index: 40; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff; display: grid; place-items: center; box-shadow: 0 14px 30px -10px rgba(0,0,0,.45); transition: transform .3s; }
+.zap:hover { transform: scale(1.06); }
+.zap svg { width: 26px; height: 26px; }
+
+/* aparecer ao rolar */
+.sobe { opacity: 0; transform: translateY(34px); transition: opacity 1.2s ease, transform 1.2s cubic-bezier(.2,.7,.1,1); }
+.sobe.visivel { opacity: 1; transform: none; }
+.abre { clip-path: inset(100% 0 0 0); transition: clip-path 1.6s cubic-bezier(.2,.7,.1,1); }
+.abre.visivel { clip-path: inset(0 0 0 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .abertura .foto img { animation: none; }
+  .sobe, .abre, .linhas .l > span { opacity: 1 !important; transform: none !important; clip-path: none !important; transition: none !important; }
+  .desca::after { animation: none; }
+  .chegada .passo { opacity: 1; }
+}
+
+/* ---------- celular e tablet ---------- */
+@media (max-width: 900px) {
+  .topo nav .agendar { display: none; }
+  .chegada .palco { grid-template-columns: 1fr; }
+  .chegada .quadro { display: none; }
+  .chegada .passo { min-height: auto; opacity: 1; padding: 0 0 72px; max-width: none; }
+  .chegada .passo .foto-celular { display: block; aspect-ratio: 4 / 4.6; border-radius: var(--arco); overflow: hidden; margin-bottom: 8px; }
+  .chegada .passo .foto-celular img { width: 100%; height: 100%; object-fit: cover; }
+  .retratos { grid-template-columns: 1fr; }
+  .retrato:nth-child(2) { margin-bottom: 0; }
+  .marcos::before { left: 6px; }
+  .marco, .marco:nth-child(even) { grid-template-columns: 1fr; gap: 6px; padding: 22px 0 22px 34px; }
+  .marco::after { left: 6px; top: 34px; }
+  .marco .ano, .marco:nth-child(even) .ano { order: 0; text-align: left; }
+  .marco:nth-child(even) p { order: 0; justify-self: start; text-align: left; }
+  .geracao { grid-template-columns: 1fr; }
+  .lista { grid-template-columns: 1fr; }
+  .lista .quem { position: static; }
+  .lista .seta { display: none; }
+  .bemestar .miolo, .duvidas .miolo { grid-template-columns: 1fr; }
+  .duvidas .cabeca { position: static; }
+  .consulta ol, .visita .grade { grid-template-columns: 1fr; }
+  .desca { display: none; }
+}
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .lista li a { grid-template-columns: 2.4rem 1fr; padding: 24px 0; }
+  .lista li a:hover { padding-left: 0; }
+  .acoes .btn { flex: 1 1 100%; justify-content: center; }
+  .bemestar .fotos { height: 440px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <a class="logo" href="#inicio" aria-label="GV Saúde, início">
+    <img class="claro" src="img/logo-horizontal-claro.png" alt="GV Saúde Núcleo Integrativo" width="168" height="30">
+    <img class="escuro" src="img/logo-horizontal.png" alt="" width="168" height="30">
+  </a>
+  <nav aria-label="Atalhos">
+    <a class="agendar" data-zap="Olá! Vim pelo site e gostaria de agendar uma consulta." href="#visita">Agendar consulta</a>
+    <button class="botao-menu" id="abreMenu" aria-expanded="false" aria-controls="menu"><i aria-hidden="true"></i>Menu</button>
+  </nav>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="fecha" id="fechaMenu">Fechar ✕</button>
+  <ol>
+    <li><a href="#chegada">A chegada</a></li>
+    <li><a href="#familia">A família</a></li>
+    <li><a href="#cuidados">Os cuidados</a></li>
+    <li><a href="#tecnologia">A tecnologia</a></li>
+    <li><a href="#consulta">A primeira consulta</a></li>
+    <li><a href="#visita">Venha nos visitar</a></li>
+  </ol>
+  <div class="rodape-menu">
+    <a href="tel:+5564999388006">(64) 99938-8006</a>
+    <span>Rua Édson Pacelli José Ferreira, 590 · Catalão-GO</span>
+  </div>
+</div>
+
+<main id="inicio">
+
+<!-- abertura -->
+<section class="abertura" aria-label="Abertura">
+  <div class="foto" id="fotoAbertura"><img src="img/fachada.jpg" alt="Fachada da GV Saúde, com o portal em arco e o nome da clínica" width="1319" height="731" fetchpriority="high"></div>
+  <div class="cantos" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="texto">
+    <span class="sub">GV Saúde · Catalão-GO</span>
+    <h1 class="linhas" data-linhas>Odontologia é coisa <em>de família.</em></h1>
+  </div>
+  <span class="desca" aria-hidden="true">Role devagar</span>
+</section>
+
+<!-- respiro -->
+<section class="frase">
+  <div>
+    <img class="simbolo sobe" src="img/simbolo-dourado.png" alt="" aria-hidden="true">
+    <p class="linhas" data-linhas>Antes da cadeira, tem um jardim. Antes do tratamento, <em>tem conversa.</em></p>
+  </div>
+</section>
+
+<!-- I. a chegada -->
+<section class="chegada" id="chegada">
+  <div class="cabeca miolo">
+    <span class="cap sobe"><b>I</b>A chegada</span>
+    <h2 class="linhas" data-linhas>Um consultório que não parece consultório.</h2>
+  </div>
+  <div class="palco">
+    <div class="quadro" aria-hidden="true">
+      <img class="ativa" src="img/varanda.jpg" alt="" data-passo="0">
+      <img src="img/sala-de-estar.jpg" alt="" data-passo="1">
+      <img src="img/prateleira.jpg" alt="" data-passo="2">
+      <img src="img/consultorio.jpg" alt="" data-passo="3" style="object-position:50% 70%">
+      <span class="contorno"></span>
+    </div>
+    <div class="passos">
+      <article class="passo ativo" data-passo="0">
+        <div class="foto-celular"><img src="img/varanda.jpg" alt="Varanda coberta com plantas e sofá" loading="lazy"></div>
+        <span class="n">01</span>
+        <h3>Uma varanda para esperar sem pressa.</h3>
+        <p>A clínica é uma casa com jardim, e o jardim tem plantas medicinais. Quem chega primeiro respira, antes de qualquer coisa.</p>
+      </article>
+      <article class="passo" data-passo="1">
+        <div class="foto-celular"><img src="img/sala-de-estar.jpg" alt="Sala de estar com sofá e poltrona" loading="lazy"></div>
+        <span class="n">02</span>
+        <h3>Uma sala que lembra a de casa.</h3>
+        <p>Sofá, poltrona, chá quente e receitas caseiras. Muita gente chega com medo de dentista, e o ambiente ajuda a baixar a guarda.</p>
+      </article>
+      <article class="passo" data-passo="2">
+        <div class="foto-celular"><img src="img/prateleira.jpg" alt="Estante com livros e peças de decoração indiana" loading="lazy"></div>
+        <span class="n">03</span>
+        <h3>Detalhes que contam de onde viemos.</h3>
+        <p>Livros, peças trazidas da Índia e o cheiro dos óleos da aromaterapia. A casa tem a cara de quem cuida dela.</p>
+      </article>
+      <article class="passo" data-passo="3">
+        <div class="foto-celular"><img src="img/consultorio.jpg" alt="Atendimento no consultório" loading="lazy" style="object-position:50% 70%"></div>
+        <span class="n">04</span>
+        <h3>E, quando chega a hora, técnica de sobra.</h3>
+        <p>Consultórios equipados, planejamento digital e uma equipe que trabalha junta há muitos anos.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- II. a família -->
+<section class="familia" id="familia">
+  <div class="cabeca">
+    <span class="cap sobe"><b>II</b>A família</span>
+    <h2 class="linhas" data-linhas>Dois dentistas, uma casa e um filho que seguiu o mesmo caminho.</h2>
+    <p class="sobe">A GV Saúde tem o nome de quem a fundou: Gabriel e Vera. Cada um seguiu uma especialidade, e os dois atendem lado a lado.</p>
+  </div>
+
+  <div class="retratos">
+    <article class="retrato sobe">
+      <div class="moldura abre"><img data-paralaxe src="img/dra-vera.jpg" alt="Dra. Vera Lúcia Jerônimo dos Santos" loading="lazy" style="object-position:50% 30%"></div>
+      <span class="esp">Bruxismo · Facetas · Reabilitação oral</span>
+      <h3>Dra. Vera Lúcia</h3>
+      <blockquote class="fala">“A GV Saúde foi idealizada para atender vocês como um lar.”<cite>Vera, no vídeo da clínica</cite></blockquote>
+      <p>Mestre em reabilitação oral pela UFU e especialista em Prótese Dentária pela UNESP. Há anos estuda o que está por trás do bruxismo e da dor na mandíbula, e foi buscar no Ayurveda, na aromaterapia e no yoga outras formas de cuidar.</p>
+      <span class="cro">CRO-GO 7513</span>
+    </article>
+    <article class="retrato sobe">
+      <div class="moldura abre"><img data-paralaxe src="img/dr-gabriel.jpg" alt="Dr. Gabriel Tadeu Costa Júnior analisando uma tomografia" loading="lazy" style="object-position:62% 50%"></div>
+      <span class="esp">Cirurgia bucomaxilofacial · Ortognática · ATM</span>
+      <h3>Dr. Gabriel Tadeu</h3>
+      <blockquote class="fala">“A extração de siso é a coisa que eu mais sou apaixonado em fazer.”<cite>Gabriel, no vídeo da clínica</cite></blockquote>
+      <p>Mestre em Cirurgia e Traumatologia Bucomaxilofacial pela UFU e especialista em Implantodontia. Foi plantonista de cirurgia de face na Santa Casa de Catalão por quinze anos e opera nos hospitais São Nicolau e Nasr Faiad.</p>
+      <span class="cro">Responsável técnico · CRO-GO 8020</span>
+    </article>
+  </div>
+
+  <div class="linha-tempo">
+    <h3 class="sobe">Uma história contada em anos</h3>
+    <ol class="marcos">
+      <li class="marco sobe"><span class="ano">2000</span><p>Gabriel se forma em Odontologia na UNESP.</p></li>
+      <li class="marco sobe"><span class="ano">2002</span><p>Vera se forma na Universidade Federal de Uberlândia. No mesmo ano, Gabriel começa lá a especialização em cirurgia bucomaxilofacial.</p></li>
+      <li class="marco sobe"><span class="ano">2004</span><p>Gabriel assume os plantões de cirurgia de face na Santa Casa de Catalão, onde fica até 2019.</p></li>
+      <li class="marco sobe"><span class="ano">2009</span><p>Vera conclui o mestrado em reabilitação oral. Dois anos depois, a especialização em prótese.</p></li>
+      <li class="marco sobe"><span class="ano">2016</span><p>Gabriel se especializa em Implantodontia e leva a odontologia digital para dentro da clínica.</p></li>
+      <li class="marco sobe"><span class="ano">2019</span><p>Vera começa a formação em Ayurveda. Depois vêm a aromaterapia clínica, o yoga e cursos na Índia.</p></li>
+      <li class="marco sobe"><span class="ano">Hoje</span><p>O filho, Rafael, cuida do planejamento digital e da impressão 3D enquanto termina a faculdade de Odontologia.</p></li>
+    </ol>
+  </div>
+
+  <div class="geracao">
+    <div class="moldura abre"><img src="img/dr-rafael.jpg" alt="Rafael dos Santos Costa" loading="lazy" width="640" height="800"></div>
+    <div class="txt">
+      <span class="cap sobe">A próxima geração</span>
+      <h3 class="linhas" data-linhas>Rafael cresceu dentro da clínica.</h3>
+      <p class="sobe">Hoje é dental designer: faz o escaneamento, o planejamento digital e a impressão 3D dos casos, e acompanha de perto o trabalho dos pais. Termina a graduação em Odontologia em 2027.</p>
+    </div>
+  </div>
+
+  <div class="video">
+    <span class="cap sobe">Na voz deles</span>
+    <h3 class="linhas" data-linhas>Três minutos dentro da clínica.</h3>
+    <p class="sobe">Vera e Gabriel contam como pensaram a GV Saúde e como é o dia a dia de cada um.</p>
+    <div class="tela abre" id="tela" data-video="-6T30Wt3m3E">
+      <img src="https://i.ytimg.com/vi/-6T30Wt3m3E/maxresdefault.jpg" alt="" decoding="async" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/-6T30Wt3m3E/hqdefault.jpg'">
+      <button type="button" aria-label="Assistir ao vídeo da clínica, 3 minutos"><span><i aria-hidden="true"></i>Assistir</span></button>
+      <span class="duracao" aria-hidden="true">3:04</span>
+    </div>
+  </div>
+</section>
+
+<!-- manifesto -->
+<section class="manifesto">
+  <span class="arco-fundo" aria-hidden="true"></span>
+  <div>
+    <blockquote class="linhas" data-linhas>Aqui, você não é um prontuário. <em>Você é uma história</em> que merece ser ouvida.</blockquote>
+    <p class="assina sobe">Família GV Saúde</p>
+  </div>
+</section>
+
+<!-- III. os cuidados -->
+<section class="cuidados" id="cuidados">
+  <div class="cabeca">
+    <span class="cap sobe"><b>III</b>Os cuidados</span>
+    <h2 class="linhas" data-linhas>Cada caso com quem mais entende dele.</h2>
+    <p class="sobe">Da placa de bruxismo à cirurgia no hospital, o tratamento começa e termina com a mesma equipe.</p>
+  </div>
+
+  <div class="lista">
+    <div class="quem sobe"><h3>Com a Dra. Vera</h3><span>Bruxismo, estética e reabilitação</span></div>
+    <ol>
+      <li class="sobe"><a data-zap="Olá! Gostaria de saber mais sobre o tratamento de bruxismo e DTM." href="#visita"><span class="n">01</span><span class="t">Bruxismo e DTM</span><span class="seta">Conversar →</span><span class="d">Ranger de dentes, dor na mandíbula e tensão no rosto. Placa feita sob medida no computador e um protocolo que olha também para o sono e a ansiedade.</span></a></li>
+      <li class="sobe"><a data-zap="Olá! Gostaria de saber mais sobre facetas e lentes de contato." href="#visita"><span class="n">02</span><span class="t">Facetas e lentes de contato</span><span class="seta">Conversar →</span><span class="d">Um sorriso mais harmonioso e natural, com planejamento digital para você ver o resultado antes de começar.</span></a></li>
+      <li class="sobe"><a data-zap="Olá! Gostaria de saber mais sobre reabilitação oral." href="#visita"><span class="n">03</span><span class="t">Reabilitação oral</span><span class="seta">Conversar →</span><span class="d">Coroas e próteses que devolvem função, conforto e beleza, planejadas caso a caso.</span></a></li>
+      <li class="sobe"><a data-zap="Olá! Gostaria de saber mais sobre as terapias integrativas." href="#visita"><span class="n">04</span><span class="t">Terapias integrativas</span><span class="seta">Conversar →</span><span class="d">Aromaterapia, Ayurveda e yoga ao lado do tratamento, para quem quer cuidar da causa e não só do sintoma.</span></a></li>
+    </ol>
+  </div>
+
+  <div class="lista">
+    <div class="quem sobe"><h3>Com o Dr. Gabriel</h3><span>Cirurgia bucomaxilofacial · atende também pela Unimed</span></div>
+    <ol>
+      <li class="sobe"><a data-zap="Olá! Gostaria de saber mais sobre extração de siso e cirurgias bucais." href="#visita"><span class="n">05</span><span class="t">Siso e cirurgias bucais</span><span class="seta">Conversar →</span><span class="d">A cirurgia que o Dr. Gabriel mais faz, há mais de vinte anos. Também enxertos e outras cirurgias da boca, no consultório ou no hospital, com sedação para quem precisa.</span></a></li>
+      <li class="sobe"><a data-zap="Olá! Gostaria de saber mais sobre implantes dentários." href="#visita"><span class="n">06</span><span class="t">Implantes dentários</span><span class="seta">Conversar →</span><span class="d">Reposição de dentes perdidos com planejamento digital e cirurgia guiada.</span></a></li>
+      <li class="sobe"><a data-zap="Olá! Gostaria de saber mais sobre cirurgia ortognática." href="#visita"><span class="n">07</span><span class="t">Cirurgia ortognática</span><span class="seta">Conversar →</span><span class="d">Corrige a posição da maxila e da mandíbula, melhorando mordida, respiração e harmonia do rosto. Planejada na clínica, feita no hospital.</span></a></li>
+      <li class="sobe"><a data-zap="Olá! Gostaria de saber mais sobre artroscopia de ATM." href="#visita"><span class="n">08</span><span class="t">Artroscopia de ATM</span><span class="seta">Conversar →</span><span class="d">Cirurgia minimamente invasiva da articulação da mandíbula, feita em hospital, para dor e travamento que não melhoram com o tratamento convencional.</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- IV. a tecnologia -->
+<section class="tecnologia" id="tecnologia">
+  <div class="foto" data-paralaxe-forte><img src="img/impressao-3d.jpg" alt="Impressora 3D e equipamentos do laboratório digital da clínica" loading="lazy"></div>
+  <div class="txt">
+    <span class="cap sobe"><b>IV</b>A tecnologia</span>
+    <h2 class="linhas" data-linhas>O seu sorriso é planejado aqui dentro.</h2>
+    <p class="sobe">Scanners, fresadora e impressoras 3D ficam aqui mesmo. O caso é escaneado, planejado no computador e produzido na clínica, e os implantes são colocados com cirurgia guiada. Menos espera, mais precisão, e você entende o tratamento antes de começar.</p>
+  </div>
+</section>
+
+<!-- bem-estar -->
+<section class="bemestar">
+  <div class="miolo">
+    <div class="txt">
+      <span class="cap sobe">Além da cadeira</span>
+      <h2 class="linhas" data-linhas>Respirar também faz parte do tratamento.</h2>
+      <p class="sobe">A clínica recebe turmas de yoga e encontros de bem-estar. Tensão e ansiedade aparecem na boca, no ranger de dentes, na dor no rosto. Cuidar delas ajuda o tratamento a durar.</p>
+    </div>
+    <div class="fotos">
+      <div class="moldura a abre"><img src="img/yoga-2.jpg" alt="Turma de yoga reunida em roda na clínica" loading="lazy"></div>
+      <div class="moldura b abre"><img src="img/equipe.jpg" alt="Equipe da GV Saúde reunida na varanda" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- V. a primeira consulta -->
+<section class="consulta" id="consulta">
+  <div class="miolo">
+    <div class="cabeca">
+      <span class="cap sobe"><b>V</b>A primeira consulta</span>
+      <h2 class="linhas" data-linhas>Começa com uma conversa.</h2>
+    </div>
+    <ol>
+      <li class="sobe"><b>1</b><h3>Você chama no WhatsApp</h3><p>E conta, do seu jeito, o que está sentindo ou o que quer mudar.</p></li>
+      <li class="sobe"><b>2</b><h3>A gente escuta</h3><p>Avaliação completa, olhando também para hábitos, sono e tensão.</p></li>
+      <li class="sobe"><b>3</b><h3>Você recebe um plano claro</h3><p>Com o especialista certo e planejamento digital quando o caso pede.</p></li>
+    </ol>
+    <div class="convenio sobe">
+      <span><b>Dra. Vera</b> · atendimento particular</span>
+      <span><b>Dr. Gabriel</b> · particular e Unimed Catalão</span>
+    </div>
+  </div>
+</section>
+
+<!-- dúvidas -->
+<section class="duvidas" id="duvidas">
+  <div class="miolo">
+    <div class="cabeca">
+      <span class="cap sobe">Dúvidas</span>
+      <h2 class="linhas" data-linhas>Perguntas que a gente sempre ouve.</h2>
+    </div>
+    <div class="sobe">
+      <details><summary>O que é odontologia integrativa?</summary><p>É a odontologia moderna somada a saberes como Ayurveda, aromaterapia e yoga. Além do tratamento clínico, olhamos para o que influencia a saúde da boca, como ansiedade, tensão muscular e qualidade do sono.</p></details>
+      <details><summary>A clínica atende convênio?</summary><p>O Dr. Gabriel atende pela Unimed Catalão nos procedimentos cobertos pelo plano. A Dra. Vera atende de forma particular. Fale com a gente para confirmar o seu caso.</p></details>
+      <details><summary>Como é o tratamento de bruxismo?</summary><p>Vai além da placa tradicional: diagnóstico digital, placa feita sob medida no computador, aromaterapia clínica e orientações de rotina baseadas no Ayurveda. A ideia é tratar a causa.</p></details>
+      <details><summary>O que é artroscopia de ATM?</summary><p>É uma cirurgia minimamente invasiva da articulação da mandíbula, feita em hospital pelo Dr. Gabriel. É indicada em alguns casos de dor, estalo ou travamento que não melhoram com placa e outros tratamentos, sempre depois de uma avaliação.</p></details>
+      <details><summary>Para quem é o atendimento no hospital?</summary><p>Para cirurgias maiores, como a ortognática, e para quem não consegue fazer o procedimento no consultório, como crianças pequenas, pessoas com autismo, ansiedade severa ou condições neurológicas. Tudo com sedação assistida e a segurança do hospital.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- visita -->
+<section class="visita" id="visita">
+  <div class="miolo">
+    <span class="cap sobe" style="color:var(--ouro)"><b>VI</b>Venha nos visitar</span>
+    <h2 class="linhas" data-linhas style="margin-top:22px">A porta está aberta. <em>O chá, quente.</em></h2>
+    <div class="grade">
+      <div class="sobe"><span>Endereço</span><a href="https://maps.app.goo.gl/9cR9J4Nzfka1fGEr6" target="_blank" rel="noopener">Rua Édson Pacelli José Ferreira (antiga Rua 31), 590<br>Vila Margom · Catalão-GO</a></div>
+      <div class="sobe"><span>Horários</span><p>Segunda a sexta, 10h às 18h<br>Sábado, 12h às 17h</p></div>
+      <div class="sobe"><span>Contato</span><a href="tel:+5564999388006">(64) 99938-8006</a></div>
+    </div>
+    <div class="acoes sobe">
+      <a class="btn btn-claro" data-zap="Olá! Vim pelo site e gostaria de agendar uma consulta." href="#visita">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a class="btn btn-linha" href="https://maps.app.goo.gl/9cR9J4Nzfka1fGEr6" target="_blank" rel="noopener">Como chegar</a>
+    </div>
+    <p class="avaliar sobe">Já é paciente? <a href="https://g.page/r/CTF3yVKjx-eXEBM/review" target="_blank" rel="noopener">Conte no Google como foi o seu atendimento.</a></p>
+    <footer class="rodape">
+      <img src="img/logo-horizontal-claro.png" alt="GV Saúde Núcleo Integrativo" width="157" height="28">
+      <p>GV Saúde Núcleo Integrativo · CRO-GO EPAO 3404<br>Responsável técnico: Dr. Gabriel Tadeu Costa Júnior · CRO-GO 8020<br>© <span id="ano">2026</span> GV Saúde Núcleo Integrativo · Catalão-GO</p>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<a class="zap" id="zap" data-zap="Olá! Vim pelo site e gostaria de agendar uma consulta." href="#visita" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+(() => {
+  const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // WhatsApp com mensagem pronta
+  const ZAP = "5564999388006";
+  document.querySelectorAll("[data-zap]").forEach(a => {
+    a.href = "https://wa.me/" + ZAP + "?text=" + encodeURIComponent(a.dataset.zap);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+
+  // divide os títulos em linhas, para revelar uma de cada vez
+  const comLinhas = [...document.querySelectorAll("[data-linhas]")];
+  comLinhas.forEach(el => { el.dataset.original = el.innerHTML; });
+  function emLinhas(el) {
+    el.innerHTML = el.dataset.original;
+    const palavras = [];
+    el.childNodes.forEach(n => {
+      const destaque = n.nodeType === 1;
+      n.textContent.split(/\s+/).forEach(p => p && palavras.push({ t: p, em: destaque }));
+    });
+    el.innerHTML = palavras.map(p => `<span class="w"${p.em ? " data-em" : ""}>${p.t}</span>`).join(" ");
+    const linhas = [];
+    let topo = null;
+    el.querySelectorAll(".w").forEach(w => {
+      if (w.offsetTop !== topo) { linhas.push([]); topo = w.offsetTop; }
+      linhas[linhas.length - 1].push(w.hasAttribute("data-em") ? `<em>${w.textContent}</em>` : w.textContent);
+    });
+    el.innerHTML = linhas.map((l, i) => `<span class="l"><span style="transition-delay:${(i * 0.12).toFixed(2)}s">${l.join(" ")}</span></span>`).join("");
+  }
+  if (!calmo) {
+    const prepara = () => comLinhas.forEach(emLinhas);
+    prepara();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(prepara);
+    let t; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(prepara, 250); });
+  }
+
+  // aparecer ao rolar
+  const alvos = document.querySelectorAll(".sobe, .abre, [data-linhas]");
+  if ("IntersectionObserver" in window && !calmo) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("visivel"); io.unobserve(e.target); }
+    }), { rootMargin: "0px 0px -12% 0px" });
+    alvos.forEach(el => io.observe(el));
+  } else {
+    alvos.forEach(el => el.classList.add("visivel"));
+  }
+
+  // capítulo "a chegada": a foto fixa troca conforme o texto passa
+  const fotos = document.querySelectorAll(".quadro img");
+  const passos = document.querySelectorAll(".passo");
+  if ("IntersectionObserver" in window) {
+    const io2 = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const n = e.target.dataset.passo;
+      passos.forEach(p => p.classList.toggle("ativo", p === e.target));
+      fotos.forEach(f => f.classList.toggle("ativa", f.dataset.passo === n));
+    }), { rootMargin: "-45% 0px -45% 0px" });
+    passos.forEach(p => io2.observe(p));
+  }
+
+  // topo, botão flutuante e movimento suave das fotos
+  const topoEl = document.getElementById("topo");
+  const abertura = document.getElementById("fotoAbertura");
+  const paralaxe = [...document.querySelectorAll("[data-paralaxe]")];
+  const forte = document.querySelector("[data-paralaxe-forte]");
+  let pedido = false;
+  function quadro() {
+    pedido = false;
+    const y = scrollY, h = innerHeight;
+    topoEl.classList.toggle("solido", y > h * 0.85);
+    if (calmo) return;
+    if (y < h * 1.2) abertura.style.transform = `translateY(${y * 0.35}px) scale(${1 + y / h * 0.08})`;
+    paralaxe.forEach(img => {
+      const r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > h) return;
+      const p = (r.top + r.height / 2 - h / 2) / h;
+      img.style.transform = `translateY(${(p * -9).toFixed(2)}%)`;
+    });
+    if (forte) {
+      const r = forte.parentElement.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < h) forte.style.transform = `translateY(${((r.top / h) * -8).toFixed(2)}%)`;
+    }
+  }
+  addEventListener("scroll", () => { if (!pedido) { pedido = true; requestAnimationFrame(quadro); } }, { passive: true });
+  quadro();
+
+  // menu em tela cheia
+  const menu = document.getElementById("menu"), abre = document.getElementById("abreMenu"), fecha = document.getElementById("fechaMenu");
+  const abrir = v => { menu.classList.toggle("aberto", v); abre.setAttribute("aria-expanded", v); document.body.style.overflow = v ? "hidden" : ""; if (v) fecha.focus(); else abre.focus(); };
+  abre.addEventListener("click", () => abrir(true));
+  fecha.addEventListener("click", () => abrir(false));
+  menu.querySelectorAll("ol a").forEach(a => a.addEventListener("click", () => abrir(false)));
+  addEventListener("keydown", e => { if (e.key === "Escape" && menu.classList.contains("aberto")) abrir(false); });
+
+  // vídeo: o player do YouTube só carrega no clique (página mais leve)
+  const tela = document.getElementById("tela");
+  if (tela) tela.querySelector("button").addEventListener("click", () => {
+    const f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + tela.dataset.video + "?autoplay=1&rel=0&modestbranding=1";
+    f.title = "Vídeo da clínica GV Saúde";
+    f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    f.allowFullscreen = true;
+    tela.replaceChildren(f);
+  });
+
+  document.getElementById("ano").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
