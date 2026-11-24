@@ -2,3 +2,5 @@
 *.site
 links*.csv
 emporio-open-fit/
+.netlify/
+cardapio-digital/
